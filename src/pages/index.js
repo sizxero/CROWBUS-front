@@ -1,6 +1,7 @@
 import Home from "./common/Home";
 import Login from "./common/Login";
 import MyPage from "./common/MyPage";
+import TimeTable from "./common/TimeTable";
 
 import SignUpStep1 from "./common/signup/ChooseMemberRole";
 import SignUpStep2 from "./common/signup/InputSignUpInfo";
@@ -19,5 +20,5 @@ import CurrentLocation from "./passenger/CurrentLocation";
 import CurrentLocationDetail from "./passenger/CurrentLocationDetail";
 
 export { Home, Login, MyPage, SignUpStep1, SignUpStep2,
-NoticeBoard, LostAndFoundBoard, PostCreate, PostDetail,
+NoticeBoard, LostAndFoundBoard, PostCreate, PostDetail, TimeTable,
 RideStatus, ReservationStep1, ReservationStep2, CurrentLocation, CurrentLocationDetail };

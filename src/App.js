@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { CurrentLocation, CurrentLocationDetail, Home, Login, LostAndFoundBoard, MyPage, NoticeBoard,
+import { CurrentLocation, CurrentLocationDetail, Home, Login, LostAndFoundBoard, MyPage, NoticeBoard, TimeTable,
   PostCreate, PostDetail, ReservationStep1, ReservationStep2, RideStatus, SignUpStep1, SignUpStep2} from "./pages";
 
 import { Provider } from 'react-redux';
@@ -16,6 +16,7 @@ const App = () => {
                   <Route path='/signup-step1' element={<SignUpStep1 />} />
                   <Route path='/signup-step2' element={<SignUpStep2 />} />
                   <Route path='/mypage' element={<MyPage />} />
+                  <Route path='/timetable' element={<TimeTable />} />
 
                   <Route path='/notice' element={<NoticeBoard />} />
                   <Route path='/lost-found' element={<LostAndFoundBoard />} />
