@@ -1,8 +1,50 @@
-body {
-    margin: 0;
-    padding: 0;
+@font-face {
+    font-family: "NanumSquareExtraBold";
+    src: url("../font/NanumSquareEB.ttf") format("truetype");
 }
 
-div#root {
-    background-color: red;
+@font-face {
+    font-family: "NanumSquareBold";
+    src: url("../font/NanumSquareB.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "NanumSquareRegular";
+    src: url("../font/NanumSquareR.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "NanumSquareLight";
+    src: url("../font/NanumSquareL.ttf") format("truetype");
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: NanumSquareRegular;    
+}
+
+h1 {
+    font-family: NanumSquareExtraBold;
+}
+
+h2 {
+    font-family: NanumSquareBold;
+}
+
+h3, h4 {
+    font-family: NanumSquareRegular;
+}
+
+button {
+    height: 3rem;
+}
+
+button.containedBtnBig {
+    width: 90%;
+}
+
+button.containedBtnSmall {
+    width: 10%;
 }
