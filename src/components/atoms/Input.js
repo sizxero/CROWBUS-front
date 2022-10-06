@@ -54,8 +54,8 @@ const Date = (props) => {
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DesktopDatePicker
             id={props.id}
-            className={props.className}
-            inputFormat="YYYY년 MM월 DD일 ddd요일"
+            className="CustomInputDate"
+            inputFormat="YYYY.MM.DD (ddd)"
             value={value}
             renderInput={(params) => <TextField {...params} />}
             onChange={props.eventHandler}
