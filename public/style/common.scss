@@ -18,6 +18,8 @@
     src: url("../font/NanumSquareL.ttf") format("truetype");
 }
 
+$CB_BLUE: #00A9CE;
+$CB_YELLOW: #FEDD00;
 
 * {
     margin: 0;
@@ -61,15 +63,48 @@ div.CrowBus {
 }
 
 div.CrowBusAndText {
-    width: 50px;
-    height: 52.7px;
+    width: 300px;
+    height: 321.1px;
     background-image: url('../images/main.png');
     background-size: cover;
 }
 
 div.CrowBusAndDriver {
-    width: 50px;
-    height: 52.7px;
+    width: 300px;
+    height: 321.1px;
     background-image: url('../images/driver.png');
     background-size: cover;
+}
+
+div.GridXS {
+    place-items: center;
+    display: grid;
+}
+
+div.MenuEle {
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+    margin: 5px 0;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+div.PassengerMenu {
+    div.MenuEle {
+        background-color: $CB_BLUE;
+    }
+}
+
+div.DriverMenu {
+    div.MenuEle {
+        background-color: $CB_YELLOW;
+    }
 }

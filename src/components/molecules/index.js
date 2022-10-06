@@ -1,3 +1,3 @@
 import { RowFlexBox, ColumnFlexBox, RowFlexBoxCenter, ColumnFlexBoxCenter } from './Box';
-
-export { RowFlexBox, ColumnFlexBox, RowFlexBoxCenter, ColumnFlexBoxCenter }
+import { GridXS } from './Item';
+export { RowFlexBox, ColumnFlexBox, RowFlexBoxCenter, ColumnFlexBoxCenter, GridXS }

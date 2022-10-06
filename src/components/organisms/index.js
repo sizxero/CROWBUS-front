@@ -1,3 +1,3 @@
 import { MainLogo, DriverLogo, TopLogo } from './Logo';
-
-export { MainLogo, DriverLogo, TopLogo } 
+import { Menu } from './Menu';
+export { MainLogo, DriverLogo, TopLogo, Menu } 

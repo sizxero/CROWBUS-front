@@ -57,14 +57,41 @@ div.CrowBus {
 
 div.CrowBusAndText {
   width: 300px;
-  height: 323.1px;
+  height: 321.1px;
   background-image: url("../images/main.png");
   background-size: cover;
 }
 
 div.CrowBusAndDriver {
   width: 300px;
-  height: 323.1px;
+  height: 321.1px;
   background-image: url("../images/driver.png");
   background-size: cover;
+}
+
+div.GridXS {
+  place-items: center;
+  display: grid;
+}
+
+div.MenuEle {
+  width: 150px;
+  height: 30px;
+  border: 1px solid black;
+  margin: 5px 0;
+}
+div.MenuEle a {
+  text-decoration: none;
+  color: black;
+}
+div.MenuEle a:hover {
+  text-decoration: underline;
+}
+
+div.PassengerMenu div.MenuEle {
+  background-color: #00A9CE;
+}
+
+div.DriverMenu div.MenuEle {
+  background-color: #FEDD00;
 }
