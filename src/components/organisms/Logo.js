@@ -15,7 +15,7 @@ const DriverLogo = () => {
 
 const TopLogo = () => {
     return (<RowFlexBox className="TopLogo">
-        <CrowBus /><H1 content="까마귀버스"/>
+        <CrowBus /><H1>까마귀버스</H1>
     </RowFlexBox>);
 }
 

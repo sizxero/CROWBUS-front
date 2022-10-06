@@ -13,12 +13,12 @@ const Home = () => {
         <TopLogo />
         <DriverLogo /><MainLogo />
         <ColumnFlexBoxCenter>
-        <H1 content="다람쥐 헌 쳇바퀴에 타고파"/>
-        <H2 content="다람쥐 헌 쳇바퀴에 타고파"/>
-        <H3 content="다람쥐 헌 쳇바퀴에 타고파"/>
-        <H4 content="다람쥐 헌 쳇바퀴에 타고파"/>
-        <P content="다람쥐 헌 쳇바퀴에 타고파" /> <P content="ptag" /> 
-        <Span id="span" className="span" content="다람쥐 헌 쳇바퀴에 타고파" /> <Span content="spantag" />
+        <H1>h1 tag</H1>
+        <H2>h2 tag</H2>
+        <H3>h3 tag</H3>
+        <H4>h4 tag</H4>
+        <P>p tag</P>
+        <Span>span tag</Span>
         <Select 
         label={"test"} 
         list={list} 
