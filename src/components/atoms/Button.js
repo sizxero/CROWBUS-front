@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, PropaneSharp, Search } from "@mui/icons-mate
   
 const ContainedButton = (props) => {
     return (
-        <div id={props.id} className={props.className}>{props.content}</div>
+        <div id={props.id} className={props.className} onClick={props.eventHandler}>{props.content}</div>
     );
 }
 

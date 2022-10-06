@@ -1,12 +1,10 @@
 import { ColumnFlexBoxCenter } from  "../../components/molecules";
-import { TopLogo } from "../../components/organisms";
+import { MainLogo, LoginShortcut } from "../../components/organisms";
+import { LoginWrapper } from "../../components/templates";
 const Home = () => {
     return (
         <>
-        <TopLogo />
-        <ColumnFlexBoxCenter>
-
-        </ColumnFlexBoxCenter>
+        홈
         </>
     );
 }

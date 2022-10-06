@@ -45,54 +45,51 @@ button {
 }
 
 div.containedBtnBigBlue {
-    width: 90%;
-    height: 30px;
-    line-height: 30px;
+    width: 70%;
+    height: 40px;
+    line-height: 40px;
     background-color: $CB_BLUE;
     text-align: center;
     border: 1px solid black;
 }
 
 div.containedBtnBigYellow {
-    width: 90%;
-    height: 30px;
-    line-height: 30px;
+    width: 70%;
+    height: 40px;
+    line-height: 40px;
     background-color: $CB_YELLOW;
     text-align: center;
     border: 1px solid black;
 }
 
 div.containedBtnBigGray {
-    width: 90%;
-    height: 30px;
-    line-height: 30px;
+    width: 70%;
+    height: 40px;
+    line-height: 40px;
     background-color: lightgray;
     text-align: center;
     border: 1px solid black;
 }
 
 div.containedBtnBlue {
-    // width: 25%;
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     background-color: $CB_BLUE;
     text-align: center;
     border: 1px solid black;
 }
 
 div.containedBtnYellow {
-    width: 25%;
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     background-color: $CB_YELLOW;
     text-align: center;
     border: 1px solid black;
 }
 
 div.containedBtnGray {
-    // width: 25%;
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     background-color: lightgray;
     text-align: center;
     border: 1px solid black;
@@ -101,8 +98,8 @@ div.containedBtnGray {
 
 div.containedBtnSmallBlue {
     width: 10%;
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     background-color: $CB_BLUE;
     text-align: center;
     border: 1px solid black;
@@ -110,8 +107,8 @@ div.containedBtnSmallBlue {
 
 div.containedBtnSmallYellow {
     width: 10%;
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     background-color: $CB_YELLOW;
     text-align: center;
     border: 1px solid black;
@@ -119,8 +116,8 @@ div.containedBtnSmallYellow {
 
 div.containedBtnSmallGray {
     width: 10%;
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     background-color: lightgray;
     text-align: center;
     border: 1px solid black;
@@ -168,7 +165,7 @@ div.GridXS {
 
 div.MenuEle {
     width: 150px;
-    height: 30px;
+    height: 40px;
     border: 1px solid black;
     margin: 5px 0;
 
@@ -252,6 +249,31 @@ div.Ticket, div.Drive {
     
         div.containedBtnSmallYellow {
             width: 20%;
+        }
+    }
+}
+
+div.LoginContainer {
+    div.LoginWrapper {
+        height: 140px;
+        justify-content: space-around;
+        div.LoginInput {
+            height: 90px;
+            justify-content: space-around;
+            div {
+                height: 40px;
+            }
+        }
+    }
+    div.LoginShortcut {
+        a {
+            text-decoration: none;
+            color: black;
+            margin: 0 3px;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     }
 }

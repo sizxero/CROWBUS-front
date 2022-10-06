@@ -7,7 +7,7 @@ const initialState = {
 
 const reducers = (state=initialState, action) => {
     const { type } = action;
-
+    
     switch (type) {
         case Action.WRITE_ID_LOGIN: {
             return {
