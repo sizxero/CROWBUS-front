@@ -22,6 +22,7 @@
 
 h1 {
   font-family: NanumSquareExtraBold;
+  font-size: 40px;
 }
 
 h2 {
@@ -36,12 +37,93 @@ button {
   height: 3rem;
 }
 
-button.containedBtnBig {
+div.containedBtnBigBlue {
   width: 90%;
+  height: 30px;
+  line-height: 30px;
+  background-color: #00A9CE;
+  text-align: center;
+  border: 1px solid black;
 }
 
-button.containedBtnSmall {
+div.containedBtnBigYellow {
+  width: 90%;
+  height: 30px;
+  line-height: 30px;
+  background-color: #FEDD00;
+  text-align: center;
+  border: 1px solid black;
+}
+
+div.containedBtnBigGray {
+  width: 90%;
+  height: 30px;
+  line-height: 30px;
+  background-color: lightgray;
+  text-align: center;
+  border: 1px solid black;
+}
+
+div.containedBtnBlue {
+  width: 25%;
+  height: 30px;
+  line-height: 30px;
+  background-color: #00A9CE;
+  text-align: center;
+  border: 1px solid black;
+}
+
+div.containedBtnYellow {
+  width: 25%;
+  height: 30px;
+  line-height: 30px;
+  background-color: #FEDD00;
+  text-align: center;
+  border: 1px solid black;
+}
+
+div.containedBtnGray {
+  width: 25%;
+  height: 30px;
+  line-height: 30px;
+  background-color: lightgray;
+  text-align: center;
+  border: 1px solid black;
+}
+
+div.containedBtnSmallBlue {
   width: 10%;
+  height: 30px;
+  line-height: 30px;
+  background-color: #00A9CE;
+  text-align: center;
+  border: 1px solid black;
+}
+
+div.containedBtnSmallYellow {
+  width: 10%;
+  height: 30px;
+  line-height: 30px;
+  background-color: #FEDD00;
+  text-align: center;
+  border: 1px solid black;
+}
+
+div.containedBtnSmallGray {
+  width: 10%;
+  height: 30px;
+  line-height: 30px;
+  background-color: lightgray;
+  text-align: center;
+  border: 1px solid black;
+}
+
+div.BoardButtonsMe {
+  justify-content: space-around;
+}
+
+div.BoardButtonsOther div {
+  margin-right: -66.6%;
 }
 
 .CustomInputDate {
@@ -49,8 +131,8 @@ button.containedBtnSmall {
 }
 
 div.CrowBus {
-  width: 50px;
-  height: 52.7px;
+  width: 60px;
+  height: 63.24px;
   background-image: url("../images/crowbus.png");
   background-size: cover;
 }
@@ -94,4 +176,31 @@ div.PassengerMenu div.MenuEle {
 
 div.DriverMenu div.MenuEle {
   background-color: #FEDD00;
+}
+
+div.Jumbotron {
+  background-color: #00A9CE;
+  padding: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+#blue {
+  background-color: #00A9CE;
+}
+
+#gray {
+  background-color: lightgray;
+}
+
+div.Pagination a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 30px;
+  margin: 6px 3px;
+  background-color: lightgray;
 }
