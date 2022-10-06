@@ -65,7 +65,6 @@ div.containedBtnBigGray {
 }
 
 div.containedBtnBlue {
-  width: 25%;
   height: 30px;
   line-height: 30px;
   background-color: #00A9CE;
@@ -83,7 +82,6 @@ div.containedBtnYellow {
 }
 
 div.containedBtnGray {
-  width: 25%;
   height: 30px;
   line-height: 30px;
   background-color: lightgray;
@@ -203,4 +201,30 @@ div.Pagination a {
   line-height: 30px;
   margin: 6px 3px;
   background-color: lightgray;
+}
+
+span.HeadingIndexBlue {
+  width: 3px;
+  height: 28px;
+  background-color: #00A9CE;
+  margin: 0 10px;
+}
+
+span.HeadingIndexYellow {
+  width: 3px;
+  height: 28px;
+  background-color: #FEDD00;
+  margin: 0 10px;
+}
+
+div.Ticket, div.Drive {
+  border: 1px solid black;
+  padding: 10px;
+  height: 90px;
+}
+div.Ticket div.DriveInfo, div.Ticket div.CarInfo, div.Drive div.DriveInfo, div.Drive div.CarInfo {
+  justify-content: space-between;
+}
+div.Ticket div.DriveInfo div.containedBtnSmallYellow, div.Ticket div.CarInfo div.containedBtnSmallYellow, div.Drive div.DriveInfo div.containedBtnSmallYellow, div.Drive div.CarInfo div.containedBtnSmallYellow {
+  width: 20%;
 }
