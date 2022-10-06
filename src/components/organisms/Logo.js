@@ -1,16 +1,16 @@
 import { CrowBus, CrowBusAndText, CrowBusAndDriver, H1 } from "../atoms";
-import { RowFlexBox } from "../molecules";
+import { RowFlexBox, RowFlexBoxCenter } from "../molecules";
 
 const MainLogo = () => {
-    return (<RowFlexBox className="MainLogo">
+    return (<RowFlexBoxCenter className="MainLogo">
         <CrowBusAndText />
-    </RowFlexBox>);
+    </RowFlexBoxCenter>);
 }
 
 const DriverLogo = () => {
-    return (<RowFlexBox className="DriverLogo">
+    return (<RowFlexBoxCenter className="DriverLogo">
         <CrowBusAndDriver />
-    </RowFlexBox>);
+    </RowFlexBoxCenter>);
 }
 
 const TopLogo = () => {
