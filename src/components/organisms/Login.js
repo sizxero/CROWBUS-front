@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Input } from '../atoms';
-import { ColumnFlexBoxCenter, RowFlexBoxCenter } from '../molecules';
+import { RowFlexBoxCenter } from '../molecules';
 
 const LoginShortcut = () => {
     return (<RowFlexBoxCenter className="LoginShortcut">

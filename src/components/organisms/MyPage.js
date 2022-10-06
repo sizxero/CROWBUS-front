@@ -1,34 +1,34 @@
-import { ContainedButton, H2, H4, Span } from '../atoms';
-import { GridXS_N, RowFlexBoxCenter,ColumnFlexBoxCenter, ColumnFlexBox, RowFlexBox } from '../molecules';
+import { ContainedButton, H4, Span } from '../atoms';
+import { GridXSN, RowFlexBoxCenter,ColumnFlexBoxCenter, ColumnFlexBox, RowFlexBox } from '../molecules';
 
 const Ticket = (props) => {
     return (<RowFlexBoxCenter className="Ticket">
-        <GridXS_N n={8}>
+        <GridXSN n={8}>
         <ColumnFlexBox className="TicketInfo">
             <H4>{props.date}</H4>
             <H4>{props.time} {props.place}</H4>
             <RowFlexBox><Span>{props.carnum} 좌석번호: {props.seat}</Span></RowFlexBox> 
         </ColumnFlexBox>
-        </GridXS_N>
-        <GridXS_N n={4}>
+        </GridXSN>
+        <GridXSN n={4}>
         <ColumnFlexBox className="ButtonWrapper">
             <ContainedButton className="containedBtnBlue" content="승차완료"/>
             <ContainedButton className="containedBtnGray" content="예약취소"/>
         </ColumnFlexBox>
-        </GridXS_N>
+        </GridXSN>
     </RowFlexBoxCenter>);
 }
 
 const TicketHistory = (props) => {
     return (<RowFlexBoxCenter className="Ticket">
-        <GridXS_N n={9}>
+        <GridXSN n={9}>
         <ColumnFlexBox className="TicketInfo">
             <H4>{props.date}</H4>
             <H4>{props.time} {props.place}</H4>
             <Span>예약일시: {props.rsvtime}</Span>
         </ColumnFlexBox>
-        </GridXS_N>
-        <GridXS_N n={3}><H4>{props.state}</H4></GridXS_N>
+        </GridXSN>
+        <GridXSN n={3}><H4>{props.state}</H4></GridXSN>
     </RowFlexBoxCenter>);
 }
 

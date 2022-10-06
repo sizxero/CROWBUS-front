@@ -4,8 +4,8 @@ const GridXS = (props) => {
     return (<Grid item xs className="GridXS">{props.children}</Grid>);
 }
 
-const GridXS_N = (props) => {
+const GridXSN = (props) => {
     return (<Grid item xs={props.n} className="GridXS">{props.children}</Grid>);
 }
 
-export { GridXS, GridXS_N } 
+export { GridXS, GridXSN } 

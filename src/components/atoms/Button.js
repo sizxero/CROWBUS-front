@@ -1,6 +1,5 @@
-import { Button, IconButton  } from "@material-ui/core";
-import { createTheme, ThemeProvider } from '@material-ui/core/styles';
-import { ChevronLeft, ChevronRight, PropaneSharp, Search } from "@mui/icons-material";
+import { IconButton  } from "@material-ui/core";
+import { ChevronLeft, ChevronRight, Search } from "@mui/icons-material";
 
   
 const ContainedButton = (props) => {
