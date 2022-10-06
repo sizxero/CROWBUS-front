@@ -1,41 +1,11 @@
 import { Button, IconButton  } from "@material-ui/core";
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
-import { ChevronLeft, ChevronRight, Search } from "@mui/icons-material";
+import { ChevronLeft, ChevronRight, PropaneSharp, Search } from "@mui/icons-material";
 
-const theme = createTheme({
-    palette: {
-      primary: {
-        main: "#00A9CE",
-      },
-      secondary: {
-        main: "#FEDD00",
-      },
-    },
-});
   
 const ContainedButton = (props) => {
     return (
-        <ThemeProvider theme={theme}>
-            <Button 
-            color={props.color} 
-            variant="contained" 
-            id={props.id}
-            className="containedBtnBig"
-            onClick={props.eventHandler}>{props.title}</Button>
-        </ThemeProvider>  
-    );
-}
-
-const ContainedButtonSmall = (props) => {
-    return (
-        <ThemeProvider theme={theme}>
-            <Button 
-            color={props.color} 
-            variant="contained" 
-            id={props.id}
-            className="containedBtnSmall"
-            onClick={props.eventHandler}>{props.title}</Button>
-        </ThemeProvider>  
+        <div id={props.id} className={props.className}>{props.content}</div>
     );
 }
 
@@ -72,4 +42,4 @@ const SearchButton = (props) => {
   );  
 }
 
-export { ContainedButton, ContainedButtonSmall, LeftButton, RightButton, SearchButton }
+export { ContainedButton, LeftButton, RightButton, SearchButton }
