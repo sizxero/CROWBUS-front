@@ -1,12 +1,6 @@
 import { ContainedButton, H2, H4, Span } from '../atoms';
 import { GridXS_N, RowFlexBoxCenter,ColumnFlexBoxCenter, ColumnFlexBox, RowFlexBox } from '../molecules';
 
-const Heading = (props) => {
-    return (<RowFlexBox>
-    <Span className={props.className} /><H2>{props.content}</H2>{props.children}
-    </RowFlexBox>);
-}
-
 const Ticket = (props) => {
     return (<RowFlexBoxCenter className="Ticket">
         <GridXS_N n={8}>
@@ -51,4 +45,4 @@ const Drive = (props) => {
     </ColumnFlexBoxCenter>);
 }
 
-export { Heading, Ticket, TicketHistory, Drive }
+export { Ticket, TicketHistory, Drive }
