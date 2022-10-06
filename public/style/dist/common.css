@@ -43,3 +43,28 @@ button.containedBtnBig {
 button.containedBtnSmall {
   width: 10%;
 }
+
+.CustomInputDate {
+  width: 70%;
+}
+
+div.CrowBus {
+  width: 50px;
+  height: 52.7px;
+  background-image: url("../images/crowbus.png");
+  background-size: cover;
+}
+
+div.CrowBusAndText {
+  width: 300px;
+  height: 323.1px;
+  background-image: url("../images/main.png");
+  background-size: cover;
+}
+
+div.CrowBusAndDriver {
+  width: 300px;
+  height: 323.1px;
+  background-image: url("../images/driver.png");
+  background-size: cover;
+}
