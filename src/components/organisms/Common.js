@@ -17,9 +17,9 @@ const DriverLogo = () => {
 }
 
 const TopLogo = () => {
-    return (<RowFlexBox className="TopLogo">
+    return (<Link to='/' className="TopLogoHomeLink"><RowFlexBox className="TopLogo">
         <CrowBus /><H1>까마귀버스</H1>
-    </RowFlexBox>);
+    </RowFlexBox></Link>);
 }
 
 // 로고 및 헤더 - 헤더

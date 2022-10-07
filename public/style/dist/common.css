@@ -37,6 +37,11 @@ button {
   height: 3rem;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 div.containedBtnBigBlue {
   width: 70%;
   height: 40px;
@@ -159,13 +164,6 @@ div.MenuEle {
   border: 1px solid black;
   margin: 5px 0;
 }
-div.MenuEle a {
-  text-decoration: none;
-  color: black;
-}
-div.MenuEle a:hover {
-  text-decoration: underline;
-}
 
 div.PassengerMenu div.MenuEle {
   background-color: #00A9CE;
@@ -216,11 +214,6 @@ span.HeadingIndexYellow {
   margin: 0 10px;
 }
 
-a.HeadingWithLink {
-  text-decoration: none;
-  color: black;
-}
-
 div.Ticket, div.Drive {
   border: 1px solid black;
   padding: 10px;
@@ -245,12 +238,7 @@ div.LoginContainer div.LoginWrapper div.LoginInput div {
   height: 40px;
 }
 div.LoginContainer div.LoginShortcut a {
-  text-decoration: none;
-  color: black;
   margin: 0 3px;
-}
-div.LoginContainer div.LoginShortcut a:hover {
-  text-decoration: underline;
 }
 
 div.SignUpBtnWrapper {
@@ -260,8 +248,6 @@ div.SignUpBtnWrapper {
 }
 div.SignUpBtnWrapper a.InputLink {
   width: 90%;
-  text-decoration: none;
-  color: black;
 }
 
 div.SignUpInputWrapper {
