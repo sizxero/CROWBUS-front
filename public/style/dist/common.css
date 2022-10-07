@@ -214,15 +214,20 @@ span.HeadingIndexYellow {
   margin: 0 10px;
 }
 
-div.Ticket, div.Drive {
+div.Ticket, div.Drive, table.MemberInfoTable {
   border: 1px solid black;
   padding: 10px;
   height: 90px;
+  margin: 10px;
 }
-div.Ticket div.DriveInfo, div.Ticket div.CarInfo, div.Drive div.DriveInfo, div.Drive div.CarInfo {
+div.Ticket div.ButtonWrapper div, div.Ticket div.containedBtnSmallYellow, div.Drive div.ButtonWrapper div, div.Drive div.containedBtnSmallYellow, table.MemberInfoTable div.ButtonWrapper div, table.MemberInfoTable div.containedBtnSmallYellow {
+  height: 30px;
+  line-height: 30px;
+}
+div.Ticket div.DriveInfo, div.Ticket div.CarInfo, div.Drive div.DriveInfo, div.Drive div.CarInfo, table.MemberInfoTable div.DriveInfo, table.MemberInfoTable div.CarInfo {
   justify-content: space-between;
 }
-div.Ticket div.DriveInfo div.containedBtnSmallYellow, div.Ticket div.CarInfo div.containedBtnSmallYellow, div.Drive div.DriveInfo div.containedBtnSmallYellow, div.Drive div.CarInfo div.containedBtnSmallYellow {
+div.Ticket div.DriveInfo div.containedBtnSmallYellow, div.Ticket div.CarInfo div.containedBtnSmallYellow, div.Drive div.DriveInfo div.containedBtnSmallYellow, div.Drive div.CarInfo div.containedBtnSmallYellow, table.MemberInfoTable div.DriveInfo div.containedBtnSmallYellow, table.MemberInfoTable div.CarInfo div.containedBtnSmallYellow {
   width: 20%;
 }
 
@@ -272,4 +277,8 @@ div.HomeContainer div.MenuWrapper {
 }
 div.HomeContainer div.MenuWrapper div.containedBtnBigGray {
   width: 96%;
+}
+
+table.MemberInfoTable {
+  border: 1px solid black;
 }

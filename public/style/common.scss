@@ -231,11 +231,15 @@ span.HeadingIndexYellow {
 }
 
 
-div.Ticket, div.Drive {
+div.Ticket, div.Drive, table.MemberInfoTable {
     border: 1px solid black;
     padding: 10px;
     height: 90px;
-
+    margin: 10px;
+    div.ButtonWrapper div, div.containedBtnSmallYellow {
+        height: 30px;
+        line-height: 30px;
+    }
     div.DriveInfo, div.CarInfo {
         justify-content: space-between;                   
     
@@ -297,4 +301,8 @@ div.HomeContainer {
             width: 96%;
         }
     }
+}
+
+table.MemberInfoTable {
+    border: 1px solid black;
 }

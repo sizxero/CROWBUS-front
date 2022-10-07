@@ -1,6 +1,17 @@
 import { ContainedButton, H4, Span } from '../atoms';
 import { GridXSN, RowFlexBoxCenter,ColumnFlexBoxCenter, ColumnFlexBox, RowFlexBox } from '../molecules';
 
+const MemberInfo = ({list}) => {
+    return (<table className="MemberInfoTable">
+        {list.map((item) => (
+            <tr>
+                <th>{item.name}</th>
+                <td>{item.value}</td>
+            </tr>
+        ))}
+    </table>);
+}
+
 const Ticket = (props) => {
     return (<RowFlexBoxCenter className="Ticket">
         <GridXSN n={8}>
@@ -45,4 +56,4 @@ const Drive = (props) => {
     </ColumnFlexBoxCenter>);
 }
 
-export { Ticket, TicketHistory, Drive }
+export { MemberInfo, Ticket, TicketHistory, Drive }
