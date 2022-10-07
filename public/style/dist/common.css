@@ -279,3 +279,11 @@ div.SignUpInputWrapper table.SignUpInputTable div {
 div.SignUpInputWrapper table.SignUpInputTable th, div.SignUpInputWrapper table.SignUpInputTable td.opt {
   width: 20%;
 }
+
+div.HomeContainer div.MenuWrapper {
+  margin: 10px 0;
+  justify-content: space-around;
+}
+div.HomeContainer div.MenuWrapper div.containedBtnBigGray {
+  width: 96%;
+}

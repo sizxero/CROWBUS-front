@@ -304,3 +304,13 @@ div.SignUpInputWrapper {
         } 
     }
 }
+
+div.HomeContainer {
+    div.MenuWrapper {
+        margin: 10px 0;
+        justify-content: space-around;
+        div.containedBtnBigGray {
+            width: 96%;
+        }
+    }
+}
