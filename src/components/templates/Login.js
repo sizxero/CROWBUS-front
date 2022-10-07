@@ -9,7 +9,7 @@ const LoginInput = () => {
     const dispatch = useDispatch();
     const LoginState = useSelector((state) => state.loginReducer);
     
-    useEffect(() => {console.log(LoginState)});
+    useEffect(() => {});
     return(
         <ColumnFlexBoxCenter className="LoginInput">
         <Input 

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Input, PasswordInput, Select, P, ContainedButton } from '../atoms';
 import { ColumnFlexBoxCenter } from '../molecules';
+import { RouteSelectBox } from '../organisms';
 
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -54,7 +55,7 @@ const SignUpInputTable = ({list, events}) => {
             eventHandler={(e) => dispatch(events[idx](e.target.value))}/></td>
             : <></>}
             { item.type === 'select'
-            ? <td className="input"><Select label={item.name} list={[{name: '옥계', value: '1'}]}
+            ? <td className="input"><RouteSelectBox
             eventHandler={(e) => dispatch(events[idx](e.target.value))}/></td>
             : <></>}
             <td className="opt">{item.btn && item.name==='아이디'

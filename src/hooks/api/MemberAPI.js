@@ -46,9 +46,7 @@ const API = {
         }
     },
     findNameByLoginId: async() => {
-        console.log('함수 호출');
         const res = await authInstance.get(`/member/name`);
-        console.log(res);
         return res.data;
     } 
 };
