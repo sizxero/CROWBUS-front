@@ -2,9 +2,9 @@ import { ContainedButton } from  '../atoms';
 import { ColumnFlexBox } from "../molecules";
 import { HeadingWithoutLink, SignUpInputTable } from "../organisms";
 
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import * as SignUpAction  from '../../redux/actions/SignUpAction';
+import MemberAPI from '../../hooks/api/MemberAPI';
 
 const commonInfo = [
     { name: "아이디", type: "text", btn: true },
@@ -25,6 +25,25 @@ const driveActFunc = [...commonActFunc, SignUpAction.writeLicenseSignUp]
 
 const SignUpInput = (props) => {
     const signUpState = useSelector((state) => state.signUpReducer);
+    const clickSignUpPassengerBtn = async() => {
+        const res = await MemberAPI.signupPassenger(signUpState);
+        if(res === 200) {
+            alert('회원가입이 정상적으로 완료되었습니다.');
+            window.location.href = '/login';
+        } else {
+            alert('회원가입에 실패했습니다.');
+        }
+    }
+
+    const clickSignUpDriverBtn = async() => {
+        const res = await MemberAPI.signupDriver(signUpState);
+        if(res === 200) {
+            alert('회원가입이 정상적으로 완료되었습니다.');
+            window.location.href = '/login';
+        } else {
+            alert('회원가입에 실패했습니다.');
+        }
+    }
     return (
         <ColumnFlexBox className="SignUpInputWrapper">
             { props.type==='passenger'
@@ -34,7 +53,7 @@ const SignUpInput = (props) => {
             <ContainedButton
             className="containedBtnBlue"
             content="회원가입"
-            eventHandler={(e) => console.log(signUpState)} />
+            eventHandler={clickSignUpPassengerBtn} />
             </>
             : <>
             <HeadingWithoutLink className="HeadingIndexYellow" content='운전기사 정보입력'/>
@@ -42,7 +61,7 @@ const SignUpInput = (props) => {
             <ContainedButton
             className="containedBtnYellow"
             content="회원가입"
-            eventHandler={(e) => console.log(signUpState)} />
+            eventHandler={clickSignUpDriverBtn} />
             </> }
         </ColumnFlexBox>
     );

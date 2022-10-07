@@ -4,6 +4,7 @@ import { ColumnFlexBoxCenter } from '../molecules';
 
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import MemberAPI from '../../hooks/api/MemberAPI';
 
 const SignUpButtons = () => {
     return (
@@ -28,7 +29,15 @@ const SignUpInputTable = ({list, events}) => {
     const dispatch = useDispatch();
     const SignUpState = useSelector((state) => state.signUpReducer);
     
-    useEffect(() => {console.log(SignUpState)});
+    const clickDuplBtn = async(id) => {
+        if(await MemberAPI.isExistId(id)) {
+            alert('사용할 수 없는 아이디입니다.');
+        } else {
+            alert('사용 가능한 아이디입니다.');
+        }
+    }
+
+    useEffect(() => {}, [SignUpState]);
 
     return (<table className="SignUpInputTable">
         {list.map((item, idx) => (
@@ -49,7 +58,8 @@ const SignUpInputTable = ({list, events}) => {
             eventHandler={(e) => dispatch(events[idx](e.target.value))}/></td>
             : <></>}
             <td className="opt">{item.btn && item.name==='아이디'
-            ? <ContainedButton className="containedBtnGray" content="중복확인"/>
+            ? <ContainedButton className="containedBtnGray" content="중복확인" 
+            eventHandler={() => clickDuplBtn(SignUpState.id) }/>
             : <></>}{item.btn && item.name==='비밀번호 재입력'
             ? SignUpState.pwchk ? <>사용가능</> : <>사용불가</> 
             : <></>}</td>

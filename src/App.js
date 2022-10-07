@@ -5,13 +5,14 @@ import { CurrentLocation, CurrentLocationDetail, Home, Login, LostAndFoundBoard,
 import { Provider } from 'react-redux';
 import store from './redux/Store';
 import rootReducer from './redux/RootReducer';
+import { getCookie } from "./hooks/api/Cookie";
 
 const App = () => {
     return (
       <Provider store={store(rootReducer)}>
           <BrowserRouter basename={process.env.PUBLIC_URL}>
               <Routes>
-                  <Route path='/' element={<Home />} />
+                  <Route path='/' element={getCookie('user') === null || getCookie('user') === undefined ? <Login /> : <Home />} />
                   <Route path='/login' element={<Login />} />
                   <Route path='/signup-step1' element={<SignUpStep1 />} />
                   <Route path='/signup-step2' element={<SignUpStep2 />} />
