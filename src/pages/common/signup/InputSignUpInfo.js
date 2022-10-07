@@ -1,6 +1,17 @@
+import queryString from 'query-string';
+import { ColumnFlexBox } from  "../../../components/molecules";
+import { TopLogo } from "../../../components/organisms";
+import { SignUpInput } from "../../../components/templates";
+
 const SignUpStep2 = () => {
+    const type = queryString.parse(window.location.search).type;
     return (
-        <>회원가입-회원정보 입력</>
+        <ColumnFlexBox className="SignUpFormContainer">
+            <TopLogo />
+            { type === 'p' 
+            ? <><SignUpInput type="passenger"/></> 
+            : <><SignUpInput type="driver"/></> }
+        </ColumnFlexBox>
     );
 }
 

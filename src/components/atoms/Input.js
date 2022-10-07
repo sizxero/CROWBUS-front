@@ -26,7 +26,7 @@ const PasswordInput = (props) => {
         type="password"
         autoComplete="current-password"
         placeholder={props.placeholder} 
-        onChange={(e) => props.eventHandler}
+        onChange={props.eventHandler}
         />
     )
 }

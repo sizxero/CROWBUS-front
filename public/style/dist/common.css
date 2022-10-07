@@ -252,3 +252,30 @@ div.LoginContainer div.LoginShortcut a {
 div.LoginContainer div.LoginShortcut a:hover {
   text-decoration: underline;
 }
+
+div.SignUpBtnWrapper {
+  padding: 1.5rem 0;
+  justify-content: space-around;
+  height: 200px;
+}
+div.SignUpBtnWrapper a.InputLink {
+  width: 90%;
+  text-decoration: none;
+  color: black;
+}
+
+div.SignUpInputWrapper {
+  padding: 10px 0;
+}
+div.SignUpInputWrapper table.SignUpInputTable {
+  height: 300px;
+}
+div.SignUpInputWrapper table.SignUpInputTable tr {
+  margin: 10px;
+}
+div.SignUpInputWrapper table.SignUpInputTable div {
+  height: 40px;
+}
+div.SignUpInputWrapper table.SignUpInputTable th, div.SignUpInputWrapper table.SignUpInputTable td.opt {
+  width: 20%;
+}

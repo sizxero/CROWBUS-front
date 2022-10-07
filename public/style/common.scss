@@ -277,3 +277,30 @@ div.LoginContainer {
         }
     }
 }
+
+div.SignUpBtnWrapper {
+    padding: 1.5rem 0;
+    justify-content: space-around;
+    height: 200px;
+    a.InputLink {
+        width: 90%;
+        text-decoration: none;
+            color: black;
+    }
+}
+
+div.SignUpInputWrapper {
+    padding: 10px 0;
+    table.SignUpInputTable {
+        height: 300px;
+        tr {
+            margin: 10px;
+        }
+        div {
+            height: 40px;
+        }
+        th, td.opt {
+            width: 20%;
+        } 
+    }
+}

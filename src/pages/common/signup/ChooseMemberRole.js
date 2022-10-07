@@ -1,6 +1,12 @@
+import { ColumnFlexBoxCenter } from  "../../../components/molecules";
+import { MainLogo, SignUpButtons } from "../../../components/organisms";
+
 const SignUpStep1 = () => {
     return (
-        <>회원가입-회원유형 선택</>
+        <ColumnFlexBoxCenter className="SignUpContainer">
+            <MainLogo />
+            <SignUpButtons />
+        </ColumnFlexBoxCenter>
     );
 }
 
