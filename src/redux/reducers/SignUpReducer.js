@@ -5,7 +5,9 @@ const initialState = {
     pw: '',
     pwre: '',
     name: '',
-    nick: '',
+    phone: '',
+    route: '',
+    license: '',
     pwchk: false,
 };
 
@@ -38,10 +40,22 @@ const reducers = (state=initialState, action) => {
                 name: action.name
             }
         }
-        case Action.WRITE_NICK_SIGNUP: {
+        case Action.WRITE_PHONE_SIGNUP: {
             return {
                 ...state,
-                nick: action.nick
+                phone: action.phone
+            }
+        }
+        case Action.SELECT_ROUTE_SIGNUP: {
+            return {
+                ...state,
+                route: action.route
+            }
+        }
+        case Action.WRITE_LICENSE_SIGNUP: {
+            return {
+                ...state,
+                license: action.license
             }
         }
         default: {
