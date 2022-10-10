@@ -1,7 +1,7 @@
 import { ColumnFlexBox } from  "../../components/molecules";
 import { TopLogo, HeadingWithoutLink, MemberInfo, Ticket, TicketHistory, Drive } from "../../components/organisms";
 import { getCookie } from "../../hooks/api/Cookie";
-import { useMemberInfo } from "../../hooks/useInfo";
+import { useMemberInfo } from "../../hooks";
 
 const MyPage = () => {
     const { memberInfo }  = useMemberInfo();

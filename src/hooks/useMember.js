@@ -1,4 +1,4 @@
-import MemberAPI from '../api/MemberAPI';
+import MemberAPI from './api/MemberAPI';
 import { useEffect, useState } from 'react';
 
 const useMemberName = () => {

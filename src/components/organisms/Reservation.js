@@ -1,5 +1,5 @@
 import { Select } from '../atoms';
-import { useAllRoutes } from '../../hooks/useInfo';
+import { useAllRoutes } from '../../hooks';
 
 const RouteSelectBox = (props) => {
     const { routes } = useAllRoutes();

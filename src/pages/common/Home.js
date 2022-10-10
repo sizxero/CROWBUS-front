@@ -4,7 +4,7 @@ import { ColumnFlexBoxCenter } from  "../../components/molecules";
 import { MainLogo, Menu } from "../../components/organisms";
 
 import { getCookie, removeCookie } from '../../hooks/api/Cookie';
-import { useMemberName } from "../../hooks/useInfo";
+import { useMemberName } from "../../hooks";
 
 const Home = () => {
     const { name } = useMemberName();

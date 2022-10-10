@@ -1,4 +1,4 @@
-import RouteAPI from '../api/RouteAPI';
+import RouteAPI from './api/RouteAPI';
 import { useEffect, useState } from 'react';
 
 const useAllRoutes = () => {
