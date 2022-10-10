@@ -219,6 +219,7 @@ div.Ticket, div.Drive, table.MemberInfoTable {
   padding: 10px;
   height: 90px;
   margin: 10px;
+  width: 300px;
 }
 div.Ticket div.ButtonWrapper div, div.Ticket div.containedBtnSmallYellow, div.Drive div.ButtonWrapper div, div.Drive div.containedBtnSmallYellow, table.MemberInfoTable div.ButtonWrapper div, table.MemberInfoTable div.containedBtnSmallYellow {
   height: 30px;

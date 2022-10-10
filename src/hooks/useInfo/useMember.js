@@ -23,4 +23,15 @@ const useMemberId = (loginId) => {
     return { flag }
 }
 
-export { useMemberName, useMemberId }
+const useMemberInfo = () => {
+    const [ memberInfo, setMemberInfo ] = useState(null);
+    useEffect(() => {
+        const fetchMemberInfo = async() => {
+            setMemberInfo(await MemberAPI.findMemberInfo());
+        }
+        fetchMemberInfo();    
+    }, []);
+    return { memberInfo }
+}
+
+export { useMemberName, useMemberId, useMemberInfo }

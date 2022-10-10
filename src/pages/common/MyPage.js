@@ -1,19 +1,41 @@
 import { ColumnFlexBox } from  "../../components/molecules";
 import { TopLogo, HeadingWithoutLink, MemberInfo, Ticket, TicketHistory, Drive } from "../../components/organisms";
+import { getCookie } from "../../hooks/api/Cookie";
+import { useMemberInfo } from "../../hooks/useInfo";
 
 const MyPage = () => {
+    const { memberInfo }  = useMemberInfo();
+    let myInfo = [];
+    if (memberInfo !== null) {
+        myInfo = [
+            {name: "이름", value: memberInfo.name},
+            {name: "아이디", value: memberInfo.loginId},
+            {name: "전화번호", value: memberInfo.phone},
+        ]
+
+        if(memberInfo.license === undefined)
+            myInfo = [...myInfo, {name: "선호노선", value: memberInfo.favoriteRoute !== null
+            ? memberInfo.favoriteRoute.name + ' ' + memberInfo.favoriteRoute.routeType
+            : "없음"}]
+        else
+            myInfo = [...myInfo, {name: "면허번호", value: memberInfo.license}]
+    }
+    
+
     return (
         <ColumnFlexBox>
             <TopLogo />
             <HeadingWithoutLink 
-            className="HeadingIndexBlue"
+            className={getCookie('role') === 'PASSENGER' ? "HeadingIndexBlue" : "HeadingIndexYellow" }
             content="내 정보"/>
-            <MemberInfo 
-            list={[{name: "이름", value: "김금오"},
-            {name: "아이디", value: "kumohkim"},
-            {name: "휴대전화", value: "010-1111-1111"},
-            {name: "선호노선", value: "옥계"}]}/>
-
+            { myInfo !== null || myInfo !== undefined 
+            ? <MemberInfo 
+            list={myInfo}/>
+            :<></>
+            }
+            
+            { getCookie('role') === 'PASSENGER'
+            ? <>
             <HeadingWithoutLink 
             className="HeadingIndexBlue"
             content="승차권 조회"/>
@@ -40,16 +62,8 @@ const MyPage = () => {
             place="양포동 주민센터" 
             rsvtime="2022.10.05 18:00:15" 
             state="탑승완료" />
-
-            <HeadingWithoutLink 
-            className="HeadingIndexYellow"
-            content="내 정보" />
-            <MemberInfo 
-            list={[{name: "이름", value: "김운전"},
-            {name: "아이디", value: "unjeonkim"},
-            {name: "휴대전화", value: "010-2222-2222"},
-            {name: "운전면허증 번호", value: "22-22-222222-22"}]}/>
-
+            </>
+            :<>
             <HeadingWithoutLink 
             className="HeadingIndexYellow"
             content="내 운행" />
@@ -58,6 +72,8 @@ const MyPage = () => {
             startday="2022.09.01"
             endday="2022.12.31"
             carnum="12가 4321" />
+            </>
+            }
         </ColumnFlexBox>
     );
 }

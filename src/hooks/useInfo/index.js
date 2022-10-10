@@ -1,3 +1,3 @@
-import { useMemberName, useMemberId } from "./useMember";
+import { useMemberName, useMemberId, useMemberInfo } from "./useMember";
 import { useAllRoutes } from "./useRoute";
-export { useMemberName, useMemberId, useAllRoutes }
+export { useMemberName, useMemberId, useAllRoutes, useMemberInfo }

@@ -48,6 +48,10 @@ const API = {
     findNameByLoginId: async() => {
         const res = await authInstance.get(`/member/name`);
         return res.data;
+    },
+    findMemberInfo: async() => {
+        const res = await authInstance.get(`/member`);
+        return res.data.data[0];
     } 
 };
 
