@@ -1,4 +1,4 @@
 import { LoginInput } from './Login';
 import { SignUpInput } from './SignUp';
-
-export { LoginInput, SignUpInput }
+import { Timetable } from './Timetable'
+export { LoginInput, SignUpInput, Timetable }

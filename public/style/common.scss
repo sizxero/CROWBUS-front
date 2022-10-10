@@ -307,3 +307,16 @@ div.HomeContainer {
 table.MemberInfoTable {
     border: 1px solid black;
 }
+
+div.TimetableContainer {
+    padding: 5px 0;
+    table.RouteTimeTable {
+        border: 1px solid black;
+        text-align: center;
+        width: 300px;
+    
+        thead {
+            background-color: $CB_BLUE;
+        }
+    }
+}

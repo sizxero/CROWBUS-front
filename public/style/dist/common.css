@@ -283,3 +283,15 @@ div.HomeContainer div.MenuWrapper div.containedBtnBigGray {
 table.MemberInfoTable {
   border: 1px solid black;
 }
+
+div.TimetableContainer {
+  padding: 5px 0;
+}
+div.TimetableContainer table.RouteTimeTable {
+  border: 1px solid black;
+  text-align: center;
+  width: 300px;
+}
+div.TimetableContainer table.RouteTimeTable thead {
+  background-color: #00A9CE;
+}
