@@ -2,6 +2,7 @@ import * as Action from '../actions/BoardAction';
 
 const initialState = {
     create: {boardType: '', routeType: '', title: '', contents: ''},
+    searchOptions: {boardType: '', routeType: '', page: 1},
 };
 
 const reducers = (state=initialState, action) => {
@@ -34,6 +35,24 @@ const reducers = (state=initialState, action) => {
                 ...state,
                 create: {boardType: state.create.boardType, routeType: state.create.routeType, 
                     title: state.create.title, contents: action.contents}
+            }
+        }
+        case Action.DISPATCH_SEARCH_BOARD_TYPE: {
+            return {
+                ...state,
+                searchOptions: {boardType: action.boardType, routeType: state.searchOptions.routeType, page: state.searchOptions.page}
+            }
+        }
+        case Action.DISPATCH_SEARCH_ROUTE_TYPE: {
+            return {
+                ...state,
+                searchOptions: {boardType: state.searchOptions.boardType, routeType: action.routeType, page: state.searchOptions.page}
+            }
+        }
+        case Action.DISPATCH_SEARCH_PAGE: {
+            return {
+                ...state,
+                searchOptions: {boardType: state.searchOptions.boardType, routeType: state.searchOptions.routeType, page: action.page}
             }
         }
         default: {

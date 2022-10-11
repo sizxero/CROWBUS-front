@@ -13,7 +13,7 @@ const PostCreateWrapper = () => {
     const onClickCreateBtn = async () => {
         const status = await BoardAPI.postCreate(postWriteState);
         if (status === 200) {
-            alert('post upload success');
+            window.location.href = postWriteState.boardType === '공지사항' ? '/notice' : '/lost-found';
         } else {
             alert('post upload error: ', status);
         }

@@ -321,6 +321,25 @@ div.TimetableContainer {
     }
 }
 
+div.NoticeBoardWrapper, div.LostAndFoundBoardWrapper {
+    span.Bold {
+        font-weight: bold;
+    }
+
+
+    div.WriteButtonWrapper {
+        padding: 5px;
+        justify-content: right;
+        height: 50px;
+        div.containedBtnBlue{
+            padding: 0 5px;
+        }
+    }
+    table.NoticeBoardTable {
+        padding: 10px;
+    }
+}
+
 div.PostCreateWrapper {
     padding: 10px 0;
     table.PostCreateTable {

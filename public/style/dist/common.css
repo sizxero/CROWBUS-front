@@ -296,6 +296,21 @@ div.TimetableContainer table.RouteTimeTable thead {
   background-color: #00A9CE;
 }
 
+div.NoticeBoardWrapper span.Bold, div.LostAndFoundBoardWrapper span.Bold {
+  font-weight: bold;
+}
+div.NoticeBoardWrapper div.WriteButtonWrapper, div.LostAndFoundBoardWrapper div.WriteButtonWrapper {
+  padding: 5px;
+  justify-content: right;
+  height: 50px;
+}
+div.NoticeBoardWrapper div.WriteButtonWrapper div.containedBtnBlue, div.LostAndFoundBoardWrapper div.WriteButtonWrapper div.containedBtnBlue {
+  padding: 0 5px;
+}
+div.NoticeBoardWrapper table.NoticeBoardTable, div.LostAndFoundBoardWrapper table.NoticeBoardTable {
+  padding: 10px;
+}
+
 div.PostCreateWrapper {
   padding: 10px 0;
 }

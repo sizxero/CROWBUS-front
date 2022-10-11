@@ -9,7 +9,6 @@ const PostDetail = (props) => {
     const pid = Number(useParams().pid);
     const { posting } = usePosting(pid);
 
-    console.log(posting);
     return (
         <ColumnFlexBox className="PostDetailContainer">
             <TopLogo />
@@ -35,8 +34,8 @@ const PostDetail = (props) => {
                 <Span className="PostContents">{posting.content}</Span>      
             </ColumnFlexBox>
             {getCookie('user') === posting.member.loginId
-            ? <><BoardButtons auth='me'/></>
-            : <><BoardButtons auth='other'/></>}
+            ? <><BoardButtons auth='me' backto={posting.boardType}/></>
+            : <><BoardButtons auth='other' backto={posting.boardType}/></>}
             </>
             : <></>}
         </ColumnFlexBox>

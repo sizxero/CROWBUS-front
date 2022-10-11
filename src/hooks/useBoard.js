@@ -12,4 +12,15 @@ const usePosting = (pid) => {
     return { posting };
 }
 
-export { usePosting }
+const useSearchPosting = (bt, page) => {
+    const [searchPosting, setSearchPosting] = useState('');
+    useEffect(() => {
+        const fetchPosting = async() => {
+            setSearchPosting(await BoardAPI.postSearch(bt, page));
+        }
+        fetchPosting();
+    }, []);
+    return { searchPosting };
+}
+
+export { usePosting, useSearchPosting }

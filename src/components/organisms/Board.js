@@ -5,9 +5,10 @@ import { RowFlexBoxCenter } from "../molecules";
 
 const Pagination = (props) => {
     const pages = _.range(0, props.totalPage);
-    const getPageLink = (num) => `${props.link}?page=${num}`;
+
+    const makeLink = (p) => `/${props.link}?page=${p+1}`
     return (<RowFlexBoxCenter className="Pagination">
-        {pages.map(page => (<Link to={getPageLink(page+1)}>{page+1}</Link>))}
+        {pages.map(page => (<Link to={makeLink(page)}>{page+1}</Link>))}
     </RowFlexBoxCenter>);
 }
 
@@ -20,15 +21,19 @@ const BoardButtons = (props) => {
             <ContainedButton 
             className="containedBtnBlue"
             content="삭제" />
+            <Link to={props.backto==='공지사항' ? '/notice' : '/lost-found'}>
             <ContainedButton
             className="containedBtnGray" 
             content="목록" />
+            </Link>
         </RowFlexBoxCenter>);
     } else {
         return (<RowFlexBoxCenter className="BoardButtonsOther">
-            <ContainedButton 
+            <Link to={props.backto==='공지사항' ? '/notice' : '/lost-found'}>
+            <ContainedButton
             className="containedBtnGray" 
             content="목록" />
+            </Link>
         </RowFlexBoxCenter>);
     }
 }
@@ -45,4 +50,14 @@ const BoardWriteButtons = (props) => {
     );
 }
 
-export { Pagination, BoardButtons, BoardWriteButtons }
+const GoToWriteButton = () => {
+    return (
+        <Link to="/write">
+            <ContainedButton 
+            className="containedBtnBlue" 
+            content="글 쓰기" />
+        </Link>
+    )
+}
+
+export { Pagination, BoardButtons, BoardWriteButtons, GoToWriteButton }

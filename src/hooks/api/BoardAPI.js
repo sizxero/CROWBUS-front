@@ -14,6 +14,10 @@ const API = {
     postDetail: async(pid) => {
         const res = await authInstance.get(`/posting/${pid}`);
         return res.data.data[0];
+    },
+    postSearch: async(bt, page) => {
+        const res = await authInstance.get(`/posting?board=${bt}&page=${page}`);
+        return res.data.data[0];
     }
 }
 
