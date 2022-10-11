@@ -1,11 +1,11 @@
 import { Select, MenuItem } from '@mui/material';
+import { P } from './Text';
 
 const SelectBox = (props) => {
     const { label, eventHandler, list } = props;
     return (
         <Select
-          labelId="demo-simple-select-helper-label"
-          id="demo-simple-select-helper"
+          className={props.className}
           onChange={eventHandler}
           defaultValue=""
           displayEmpty

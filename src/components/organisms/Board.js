@@ -33,4 +33,16 @@ const BoardButtons = (props) => {
     }
 }
 
-export { Pagination, BoardButtons }
+const BoardWriteButtons = (props) => {
+    return (
+        <RowFlexBoxCenter className="BoardWriteButtons">
+            <ContainedButton 
+            className="containedBtnBlue" 
+            content={props.btn.name}
+            eventHandler={props.btn.onclick} />
+            <Link to='/'><ContainedButton className="containedBtnGray" content="취소" /></Link>
+        </RowFlexBoxCenter>
+    );
+}
+
+export { Pagination, BoardButtons, BoardWriteButtons }
