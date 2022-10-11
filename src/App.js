@@ -22,7 +22,7 @@ const App = () => {
                   <Route path='/notice' element={<NoticeBoard />} />
                   <Route path='/lost-found' element={<LostAndFoundBoard />} />
                   <Route path='/write' element={<PostCreate />} />
-                  <Route path='/post/detail' element={<PostDetail />} />
+                  <Route path='/post/:pid' element={<PostDetail />} />
 
                   <Route path='/reservation-step1' element={<ReservationStep1 />} />
                   <Route path='/reservation-step2' element={<ReservationStep2 />} />
