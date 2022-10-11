@@ -1,5 +1,4 @@
 import saveToken, { authInstance, defaultInstance } from './AxiosInstance';
-import { getCookie } from './Cookie';
 
 const API = {
     login: async(data) => {
