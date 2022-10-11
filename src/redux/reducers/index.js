@@ -1,4 +1,4 @@
 import loginReducer from './LoginReducer';
 import signUpReducer from './SignUpReducer';
-
-export { loginReducer, signUpReducer };
+import boardReducer from './BoardReducer';
+export { loginReducer, signUpReducer, boardReducer };

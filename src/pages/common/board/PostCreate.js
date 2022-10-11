@@ -1,6 +1,13 @@
+import { ColumnFlexBox } from '../../../components/molecules';
+import { TopLogo } from '../../../components/organisms';
+import { PostCreateWrapper } from '../../../components/templates';
+
 const PostCreate = () => {
     return (
-        <>글 작성</>
+        <ColumnFlexBox className="PostCreateContainer">
+        <TopLogo />
+        <PostCreateWrapper />
+        </ColumnFlexBox>
     );
 }
 

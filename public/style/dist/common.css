@@ -295,3 +295,44 @@ div.TimetableContainer table.RouteTimeTable {
 div.TimetableContainer table.RouteTimeTable thead {
   background-color: #00A9CE;
 }
+
+div.PostCreateWrapper {
+  padding: 10px 0;
+}
+div.PostCreateWrapper table.PostCreateTable th {
+  padding: 0 10px;
+  text-align: center;
+}
+div.PostCreateWrapper table.PostCreateTable div.CustomInput {
+  width: 90%;
+}
+div.PostCreateWrapper div.BoardWriteButtons {
+  padding: 15px 0;
+}
+div.PostCreateWrapper div.BoardWriteButtons a {
+  width: auto;
+}
+div.PostCreateWrapper div.BoardWriteButtons div.containedBtnBlue, div.PostCreateWrapper div.BoardWriteButtons div.containedBtnGray {
+  width: 100px;
+}
+
+div.PostDetailContainer div.PostInfo {
+  padding: 10px 5px;
+}
+div.PostDetailContainer div.PostInfo div.PostTitleInfo h4.PostRoute {
+  padding-right: 5px;
+}
+div.PostDetailContainer div.PostInfo div.PostSubInfo {
+  padding: 5px 0;
+}
+div.PostDetailContainer div.PostInfo div.PostSubInfo div.PostSubInfoFirstRow {
+  justify-content: space-between;
+}
+div.PostDetailContainer div.PostInfo span.PostContents {
+  border: 1px solid black;
+  padding: 5px;
+  height: 200px;
+}
+div.PostDetailContainer div.BoardButtonsMe div, div.PostDetailContainer div.BoardButtonsOther div {
+  width: 75px;
+}

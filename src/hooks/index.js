@@ -1,3 +1,4 @@
 import { useMemberName, useMemberId, useMemberInfo } from "./useMember";
 import { useAllRoutes } from "./useRoute";
-export { useMemberName, useMemberId, useAllRoutes, useMemberInfo }
+import { usePosting } from './useBoard';
+export { useMemberName, useMemberId, useAllRoutes, useMemberInfo, usePosting }
