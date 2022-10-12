@@ -1,6 +1,17 @@
+import { ContainedButton } from '../../../components/atoms';
+import { ColumnFlexBoxCenter } from '../../../components/molecules';
+import { MainLogo } from  '../../../components/organisms';
+import { ChooseSchedule } from '../../../components/templates';
+
 const ReservationStep1 = () => {
     return (
-        <>예약-스케줄 선택</>
+        <ColumnFlexBoxCenter className="ChooseDriveScheduleContainer">
+            <MainLogo />
+            <ChooseSchedule />
+            <ContainedButton
+            className="containedBtnBlue"
+            content="좌석선택" />
+        </ColumnFlexBoxCenter>
     );
 }
 

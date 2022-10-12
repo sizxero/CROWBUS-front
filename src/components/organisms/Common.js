@@ -43,7 +43,7 @@ export { MainLogo, DriverLogo, TopLogo, Jumbotron, HeadingWithoutLink, HeadingWi
 
 // 메뉴
 const passengerMenu = [
-    {name: '승차권 예매', link: "/reservation"},
+    {name: '승차권 예매', link: "/reservation-step1"},
     {name: '마이페이지', link: "/mypage"},
     {name: '버스 현위치', link: "/curr-location"},
     {name: '시간표 조회', link: "/timetable"},

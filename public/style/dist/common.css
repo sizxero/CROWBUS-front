@@ -351,3 +351,13 @@ div.PostDetailContainer div.PostInfo span.PostContents {
 div.PostDetailContainer div.BoardButtonsMe div, div.PostDetailContainer div.BoardButtonsOther div {
   width: 75px;
 }
+
+div.ChooseDriveScheduleContainer div.ChooseSchedule {
+  padding: 10px 0;
+}
+div.ChooseDriveScheduleContainer div.ChooseSchedule > div.CustomInputDate, div.ChooseDriveScheduleContainer div.containedBtnBlue {
+  width: 300px;
+}
+div.ChooseDriveScheduleContainer div.RouteAndPlaceWrapper div {
+  width: 150px;
+}

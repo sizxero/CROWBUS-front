@@ -391,3 +391,16 @@ div.PostDetailContainer {
         } 
     }
 }
+
+div.ChooseDriveScheduleContainer {
+    div.ChooseSchedule {
+        padding: 10px 0;
+    }
+    div.ChooseSchedule > div.CustomInputDate, div.containedBtnBlue {
+        width: 300px;
+    }
+
+    div.RouteAndPlaceWrapper div {
+        width: 150px;
+    }
+}

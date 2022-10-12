@@ -12,4 +12,15 @@ const useAllRoutes = () => {
     return { routes };
 }
 
-export { useAllRoutes }
+const usePlaces = (rid) => {
+    const [ places, setPlaces ] = useState(null);
+    useEffect(() => {
+        const fetchPlaces = async() => {
+            setPlaces(await RouteAPI.findTimetable(rid));
+        }
+        fetchPlaces();
+    }, []);
+    return { places };
+}
+
+export { useAllRoutes, usePlaces }

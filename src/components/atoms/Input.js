@@ -48,15 +48,14 @@ const TextArea = (props) => {
 
 const Date = (props) => {
     dayjs.locale('ko');
-    const [value, setValue] = useState(dayjs());
-
+    
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DesktopDatePicker
             id={props.id}
             className="CustomInputDate"
             inputFormat="YYYY.MM.DD (ddd)"
-            value={value}
+            value={props.value}
             renderInput={(params) => <TextField {...params} />}
             onChange={props.eventHandler}
             />
