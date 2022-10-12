@@ -2,6 +2,10 @@ import { Select } from '../atoms';
 import { useAllRoutes, useDrives, usePlaces } from '../../hooks';
 import { useEffect, useState } from 'react';
 
+import { reservationReducer } from '../../redux/reducers';
+import * as ReservationAction from '../../redux/actions/ReservationAction';
+import { useDispatch, useSelector } from 'react-redux';
+
 const RouteSelectBox = (props) => {
     const { routes } = useAllRoutes();
     const processingData = [];
@@ -16,11 +20,12 @@ const RouteSelectBox = (props) => {
 
 const RsvSelectBox = (props) => {
     const date = props.date.format('YYYY-MM-DD');
-
+    
     const RsvRouteSelectBox = () => {
         const { drives } = useDrives(date);
         const [ rid, setRid ] = useState(0);
-    
+        
+
         const processingData = [];
         if(drives !== null && drives !== '' && drives !== undefined) {
             drives.map((dv) => processingData.push({name: dv.route.name+' '+dv.route.routeType, value: dv.route.id}))
@@ -31,20 +36,29 @@ const RsvSelectBox = (props) => {
         }
         
         useEffect(() => {
-
+            
         }, [rid]);          
-
+        
         const PlaceSelectBox = (props) => {
+            const dispatch = useDispatch();
+
             const { places } = usePlaces(props.rid);
             const processingData2 = [];
             if(places !== null && places !== '' && places !== undefined) {
                 places.map((pc) => processingData2.push({name: pc.place, value: pc.timetableId}))
             }
+
+            const placeOnChange = (e) => {
+                dispatch(ReservationAction.selectRoute(props.rid));
+                dispatch(ReservationAction.selectPlace(e.target.value));
+            }
+
             return (
                 <>
                 <Select 
+                defaultValue=""
                 className={props.className}
-                eventHandler={(e) => console.log(e.target.value)} 
+                eventHandler={placeOnChange} 
                 label="장소" list={processingData2} />
                 </>
             );

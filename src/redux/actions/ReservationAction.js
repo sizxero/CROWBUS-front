@@ -12,9 +12,9 @@ export const selectDate = (date) => {
     }
 }
 
-export const selecRoute = (route) => {
+export const selectRoute = (route) => {
     return {
-        type: SELECT_DATE,
+        type: SELECT_ROUTE,
         route: route
     }
 }
