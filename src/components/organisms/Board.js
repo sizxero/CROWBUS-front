@@ -8,7 +8,7 @@ const Pagination = (props) => {
 
     const makeLink = (p) => `/${props.link}?page=${p+1}`
     return (<RowFlexBoxCenter className="Pagination">
-        {pages.map(page => (<Link to={makeLink(page)}>{page+1}</Link>))}
+        {pages.map(page => (<a href={makeLink(page)}>{page+1}</a>))}
     </RowFlexBoxCenter>);
 }
 
