@@ -404,3 +404,56 @@ div.ChooseDriveScheduleContainer {
         width: 150px;
     }
 }
+
+div.ChooseSeatContainer {
+    a.HeadingWithLink {
+        margin: 10px;
+    }
+
+    div.SeatMap {
+        width: 200px;
+        padding: 20px 0;
+
+        div.Seat {
+            float: left;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        div.SeatChoosed {
+            float: left;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            background-color: gray;
+        }
+
+        div.SeatChoice {
+            float: left;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            background-color: $CB_BLUE;
+        }
+
+        div.Empty {
+            float: left;
+            width: 40px;
+            height: 40px;
+            box-sizing: border-box;
+        }
+    }
+    div#rsvCompleted {
+        width: 300px;
+    }
+}

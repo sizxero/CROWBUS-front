@@ -361,3 +361,49 @@ div.ChooseDriveScheduleContainer div.ChooseSchedule > div.CustomInputDate, div.C
 div.ChooseDriveScheduleContainer div.RouteAndPlaceWrapper div {
   width: 150px;
 }
+
+div.ChooseSeatContainer a.HeadingWithLink {
+  margin: 10px;
+}
+div.ChooseSeatContainer div.SeatMap {
+  width: 200px;
+  padding: 20px 0;
+}
+div.ChooseSeatContainer div.SeatMap div.Seat {
+  float: left;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+div.ChooseSeatContainer div.SeatMap div.SeatChoosed {
+  float: left;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background-color: gray;
+}
+div.ChooseSeatContainer div.SeatMap div.SeatChoice {
+  float: left;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background-color: #00A9CE;
+}
+div.ChooseSeatContainer div.SeatMap div.Empty {
+  float: left;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+}
+div.ChooseSeatContainer div#rsvCompleted {
+  width: 300px;
+}

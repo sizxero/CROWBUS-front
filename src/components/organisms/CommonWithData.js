@@ -24,7 +24,6 @@ const RsvSelectBox = (props) => {
     const RsvRouteSelectBox = () => {
         const { drives } = useDrives(date);
         const [ rid, setRid ] = useState(0);
-        
 
         const processingData = [];
         if(drives !== null && drives !== '' && drives !== undefined) {

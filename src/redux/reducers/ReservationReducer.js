@@ -5,6 +5,7 @@ const initialState = {
     route: '',
     place: '',
     seat: '',
+    did: '',
 };
 
 const reducers = (state=initialState, action) => {
@@ -34,6 +35,12 @@ const reducers = (state=initialState, action) => {
             return {
                 ...state,
                 seat: action.seat
+            }
+        }
+        case Action.DISPATCH_DRIVE_ID: {
+            return {
+                ...state,
+                did: action.did
             }
         }
         default: {
