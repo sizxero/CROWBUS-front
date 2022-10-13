@@ -5,7 +5,13 @@ import { useMemberInfo } from "../../hooks";
 
 const MyPage = () => {
     const { memberInfo }  = useMemberInfo();
+    
     let myInfo = [];
+    let myTicketInfo = [];
+    let currTicket = [];
+    let pastTicket = [];
+    let myDrives = [];
+    
     if (memberInfo !== null) {
         myInfo = [
             {name: "이름", value: memberInfo.name},
@@ -19,8 +25,40 @@ const MyPage = () => {
             : "없음"}]
         else
             myInfo = [...myInfo, {name: "면허번호", value: memberInfo.license}]
+
+
+        if(getCookie('role') === 'PASSENGER') {
+            if(memberInfo.reservations.length !== 0) {
+                memberInfo.reservations.map((myrsv) => 
+                    myTicketInfo.push({
+                        date: myrsv.seat.date, 
+                        time: myrsv.place.arrivalTime.substr(11, 5), 
+                        place: myrsv.place.place, 
+                        carnum: myrsv.seat.drive.bus.busNum, 
+                        seat: myrsv.seat.seatNo, 
+                        rsvtime: myrsv.modifiedTime, 
+                        state: myrsv.reservationType})
+                )
+            }
+        } else if(getCookie('role') === 'BUSDRIVER') {
+            if(memberInfo.drives.length !== 0) {
+                memberInfo.drives.map((md) => 
+                    myDrives.push({
+                        courseName: md.route.name + ' ' + md.route.routeType,
+                        startday: md.startDay,
+                        endday: md.endDay,
+                        carnum: md.bus.busNum
+                    })
+                )
+            }
+        }
+
     }
-    
+
+    if(getCookie('role') === 'PASSENGER') {
+        currTicket = myTicketInfo.filter(t => t.state === '탑승예정');
+        pastTicket = myTicketInfo.filter(t => t.state !== '탑승예정');
+    }
 
     return (
         <ColumnFlexBox>
@@ -39,39 +77,49 @@ const MyPage = () => {
             <HeadingWithoutLink 
             className="HeadingIndexBlue"
             content="승차권 조회"/>
+            { currTicket.length === 0
+            ? <>승차권이 없습니다.</>
+            : currTicket.map((ct) => 
+            <>
             <Ticket
-            date="2022.10.07 (금)" 
-            time="08:35" 
-            place="양포동 주민센터" 
-            carnum="12가 4321" 
-            seat="3"/>
+            date={ct.date}
+            time={ct.time}
+            place={ct.place}
+            carnum={ct.carnum}
+            seat={ct.seat}/>
+            </>
+            )}
+            
 
             <HeadingWithoutLink 
             className="HeadingIndexBlue"
             content="승차권 예매 이력"/>
+            { pastTicket.length === 0
+            ? <>승차권 예매이력이 없습니다.</>
+            : pastTicket.map((pt) => 
+            <>
             <TicketHistory 
-            date="2022.10.06 (목)" 
-            time="18:15" 
-            place="학교" 
-            rsvtime="2022.10.06 14:43:26" 
-            state="예약취소" />
-
-            <TicketHistory 
-            date="2022.10.06 (목)" 
-            time="08:35" 
-            place="양포동 주민센터" 
-            rsvtime="2022.10.05 18:00:15" 
-            state="탑승완료" />
+            date={pt.date}
+            time={pt.time}
+            place={pt.place}
+            rsvtime={pt.rsvtime}
+            state={pt.state} />
+            </>
+            )}
             </>
             :<>
             <HeadingWithoutLink 
             className="HeadingIndexYellow"
             content="내 운행" />
+            {myDrives.length === 0
+            ? <>운행 정보가 없습니다.</>
+            : myDrives.map((md) => <>
             <Drive 
-            courseName="옥계 등교"
-            startday="2022.09.01"
-            endday="2022.12.31"
-            carnum="12가 4321" />
+            courseName={md.courseName}
+            startday={md.startday}
+            endday={md.endday}
+            carnum={md.carnum} />
+            </>)}
             </>
             }
         </ColumnFlexBox>
