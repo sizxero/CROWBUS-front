@@ -12,7 +12,8 @@ const API = {
     },
     reservation: async(data) => {
         const processingData = {
-            seatId: data.seat
+            seatId: data.seat,
+            placeId: data.place
         }
         const res = await authInstance.post(`/reservation`, processingData);
         return res.status;
