@@ -40,4 +40,17 @@ const useSeats = (date, dvid) => {
     return { seats };
 }
 
-export { useDrives, useDriveId, useSeats }
+const useCurrDrives = (date) => {
+    if (date === null || date === undefined || date === '')
+        date='';
+    const [ currDrives, setCurrDrives ] = useState([]);
+    useEffect(() => {
+        const fetchCurrDrives = async() => {
+            setCurrDrives(await DriveAPI.findCurrDrive(date));
+        }
+        fetchCurrDrives();
+    }, []);
+    return { currDrives, setCurrDrives };
+}
+
+export { useDrives, useDriveId, useSeats, useCurrDrives }

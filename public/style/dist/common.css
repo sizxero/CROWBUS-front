@@ -407,3 +407,17 @@ div.ChooseSeatContainer div.SeatMap div.Empty {
 div.ChooseSeatContainer div#rsvCompleted {
   width: 300px;
 }
+
+div.RideStatusContainer div.RideStatusWrapper div.RideStatusArea {
+  border: 1px solid black;
+  width: 300px;
+  height: 90px;
+  margin: 5px;
+  padding: 10px;
+}
+div.RideStatusContainer div.RideStatusWrapper h3, div.RideStatusContainer div.RideStatusWrapper span {
+  font-size: 20px;
+}
+div.RideStatusContainer div.RideStatusWrapper div.FirstRow {
+  justify-content: space-between;
+}

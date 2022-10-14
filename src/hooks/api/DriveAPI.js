@@ -10,6 +10,10 @@ const API = {
         const res2 = await defaultInstance.get( `/seat?date=${date}&dvid=${res.data}`);
         return res2.data.data;
     },
+    findCurrDrive: async(date) => {
+        const res = await authInstance.get(`/drive/curr?dt=${date}`)
+        return res.data;
+    },
     reservation: async(data) => {
         const processingData = {
             seatId: data.seat,

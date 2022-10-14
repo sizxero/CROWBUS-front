@@ -457,3 +457,23 @@ div.ChooseSeatContainer {
         width: 300px;
     }
 }
+
+div.RideStatusContainer {
+    div.RideStatusWrapper {
+        div.RideStatusArea {
+            border: 1px solid black;
+            width: 300px;
+            height: 90px;
+            margin: 5px;
+            padding: 10px;
+        }
+        
+        h3, span {
+            font-size: 20px;
+        }
+    
+        div.FirstRow {
+            justify-content: space-between;
+        }
+    }
+}
