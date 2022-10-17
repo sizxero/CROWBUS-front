@@ -23,4 +23,26 @@ const usePlaces = (rid) => {
     return { places };
 }
 
-export { useAllRoutes, usePlaces }
+const useGoToSchoolRoutes = () => {
+    const [ goToSchoolRoutes, setGoToSchoolRoutes] = useState(null);
+    useEffect(() => {
+        const fetchGoToSchoolRoutes = async() => {
+            setGoToSchoolRoutes(await RouteAPI.findGoToSchoolRoutes());
+        }
+        fetchGoToSchoolRoutes();
+    }, []);
+    return { goToSchoolRoutes };
+}
+
+const useGoToHomeRoutes = () => {
+    const [ goToHomeRoutes, setGoToHomeRoutes ] = useState(null);
+    useEffect(() => {
+        const fetchGoToHomeRoutes = async() => {
+            setGoToHomeRoutes(await RouteAPI.findGoToHomeRoutes());
+        }
+        fetchGoToHomeRoutes();
+    }, []);
+    return { goToHomeRoutes };
+}
+
+export { useAllRoutes, usePlaces, useGoToSchoolRoutes, useGoToHomeRoutes }

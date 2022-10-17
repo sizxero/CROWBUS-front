@@ -421,3 +421,45 @@ div.RideStatusContainer div.RideStatusWrapper h3, div.RideStatusContainer div.Ri
 div.RideStatusContainer div.RideStatusWrapper div.FirstRow {
   justify-content: space-between;
 }
+
+div.CurrentLocationContainer div.CurrLocationArea {
+  border: 1px solid black;
+  width: 300px;
+  height: 90px;
+  margin: 5px;
+  padding: 10px;
+  justify-content: center;
+}
+div.CurrentLocationContainer div.TimetableWrapper {
+  padding: 10px 0;
+}
+div.CurrentLocationContainer div.TimetableWrapper div.CurrLocationTimetableArea {
+  height: 60px;
+  padding: 0 10px;
+}
+div.CurrentLocationContainer div.TimetableWrapper div.CurrLocationTimetableArea div.Location {
+  position: relative;
+  left: 10px;
+  height: 60px;
+}
+div.CurrentLocationContainer div.TimetableWrapper div.CurrLocationTimetableArea div.Location div.circle {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 10px;
+  left: -15px;
+  top: 20px;
+  z-index: 5;
+}
+div.CurrentLocationContainer div.TimetableWrapper div.CurrLocationTimetableArea div.Location div.VerticalLine {
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: lightgray;
+}
+div.CurrentLocationContainer div.TimetableWrapper div.CurrLocationTimetableArea div.CurrLocationTimetableInfo {
+  width: 250px;
+  margin-left: 30px;
+}

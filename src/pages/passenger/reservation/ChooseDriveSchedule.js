@@ -8,7 +8,7 @@ import { ChooseSchedule } from '../../../components/templates';
 const ReservationStep1 = () => {
     return (
         <ColumnFlexBoxCenter className="ChooseDriveScheduleContainer">
-            <MainLogo />
+            <Link to='/'><MainLogo /></Link>
             <ChooseSchedule />
             <Link to='/reservation-step2'>
             <ContainedButton    

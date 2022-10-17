@@ -26,7 +26,7 @@ const App = () => {
 
                   <Route path='/reservation-step1' element={<ReservationStep1 />} />
                   <Route path='/reservation-step2' element={<ReservationStep2 />} />
-                  <Route path='/curr-location/detail' element={<CurrentLocationDetail />} />
+                  <Route path='/curr-location/:rid' element={<CurrentLocationDetail />} />
                   <Route path='/curr-location' element={<CurrentLocation />} />
 
                   <Route path='/ride-status' element={<RideStatus />} />

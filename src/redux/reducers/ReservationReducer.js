@@ -11,7 +11,6 @@ const initialState = {
 const reducers = (state=initialState, action) => {
     const { type } = action;
     
-    console.log(action);
     switch (type) {
         case Action.SELECT_DATE: {
             return {
