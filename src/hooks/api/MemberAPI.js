@@ -1,10 +1,11 @@
 import saveToken, { authInstance, defaultInstance } from './AxiosInstance';
+import crypto from 'crypto-js';
 
 const API = {
     login: async(data) => {
         let processingData = {
             loginId: data.id,
-            pw: data.pw
+            pw: crypto.MD5(data.pw).toString()
         }
         const res = await defaultInstance.post(`/login`, processingData);
         saveToken(res);
