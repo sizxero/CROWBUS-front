@@ -12,6 +12,17 @@ const useAllRoutes = () => {
     return { routes };
 }
 
+const useOneRoute = (rid) => {
+    const [route, setRoute ] = useState(null);
+    useEffect(() => {
+        const fetchRoute = async() => {
+            setRoute(await RouteAPI.findOneRoute(rid));
+        }
+        fetchRoute();
+    }, []);
+    return { route };
+}
+
 const usePlaces = (rid) => {
     const [ places, setPlaces ] = useState(null);
     useEffect(() => {
@@ -45,4 +56,4 @@ const useGoToHomeRoutes = () => {
     return { goToHomeRoutes };
 }
 
-export { useAllRoutes, usePlaces, useGoToSchoolRoutes, useGoToHomeRoutes }
+export { useAllRoutes, usePlaces, useGoToSchoolRoutes, useGoToHomeRoutes, useOneRoute }

@@ -35,7 +35,7 @@ const CurrLocationTimetable = ({data}) => {
             </div>
             <ColumnFlexBox className='CurrLocationTimetableInfo'>
                 <H3>{data.place}</H3>
-                <P>{data.arrivalTime.substr(11, 5)}</P>
+                <P>{data.arrivalTime !== null && data.arrivalTime !== undefined ? data.arrivalTime.substr(11, 5) : ''}</P>
             </ColumnFlexBox>
         </RowFlexBox>
     );

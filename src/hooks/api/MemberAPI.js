@@ -51,6 +51,7 @@ const API = {
     },
     findMemberInfo: async() => {
         const res = await authInstance.get(`/member`);
+        console.log(res);
         return res.data.data[0];
     } 
 };

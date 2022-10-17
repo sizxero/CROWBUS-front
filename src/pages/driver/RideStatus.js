@@ -37,7 +37,7 @@ const RideStatus = () => {
             ? currDrives.map((cd) => <>
             <RideStatusArea 
             courseName={cd.drive.route.name + ' ' + cd.drive.route.routeType}
-            rsv={45-cd.rsv}
+            rsv={cd.rsv}
             carNum={cd.drive.bus.busNum}/>
             </>)
             : <>운행 정보가 없습니다.</>}

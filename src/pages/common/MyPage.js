@@ -32,8 +32,8 @@ const MyPage = () => {
                 memberInfo.reservations.map((myrsv) => 
                     myTicketInfo.push({
                         date: myrsv.seat.date, 
-                        time: myrsv.place.arrivalTime.substr(11, 5), 
-                        place: myrsv.place.place, 
+                        time: myrsv.place.arrivalTime !== null && myrsv.place.arrivalTime !== undefined ? myrsv.place.arrivalTime.substr(11, 5) : '18:15 학교', 
+                        place: myrsv.place.arrivalTime !== null && myrsv.place.arrivalTime !== undefined ? myrsv.place.place : '→ ' + myrsv.place.place, 
                         carnum: myrsv.seat.drive.bus.busNum, 
                         seat: myrsv.seat.seatNo, 
                         rsvtime: myrsv.modifiedTime, 
@@ -93,9 +93,9 @@ const MyPage = () => {
 
             <HeadingWithoutLink 
             className="HeadingIndexBlue"
-            content="승차권 예매 이력"/>
+            content="과거 승차권 예매 이력"/>
             { pastTicket.length === 0
-            ? <>승차권 예매이력이 없습니다.</>
+            ? <>과거 승차권 예매이력이 없습니다.</>
             : pastTicket.map((pt) => 
             <>
             <TicketHistory 
