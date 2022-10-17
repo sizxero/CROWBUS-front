@@ -15,6 +15,8 @@
       ㄴ style
         ㄴ dist
           ㄴ common.css
+        ㄴ font
+        ㄴ images
         ㄴ common.scss
       ㄴ favicon.ico
       ㄴ index.html
@@ -25,7 +27,10 @@
         ㄴ molecules
         ㄴ organisms
         ㄴ templates
+        
       ㄴ hooks
+        ㄴ api
+
       ㄴ pages
         ㄴ common
           ㄴ board
